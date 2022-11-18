@@ -12,5 +12,6 @@ tips = {
 ' TIP: Nvidia, fuck you.',
 ' TIP: Open a Neovim terminal buffer with :terminal.',
 ' TIP: An array always starts at 0... except in Lua.',
+' TIP: Vi, vi, vi = 666?!?!',
 ' TIP: It\'s not illegal, if you don\'t get caught.'
 }

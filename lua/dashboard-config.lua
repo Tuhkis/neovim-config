@@ -1,10 +1,15 @@
 local db = require('dashboard')
-local home = os.getenv('HOME')
+
+local pwd = os.getenv('PWD')
 
 math.randomseed(os.time())
 
 require('ascii-art')
-db.default_banner = ascii_art[math.random(1, #(ascii_art))]
+ascii = ascii_art[math.random(1, #(ascii_art))]
+ascii[#(ascii)+1]=''
+ascii[#(ascii)+1]=pwd
+
+db.default_banner = ascii
 
 db.custom_center = {
 	{
@@ -16,6 +21,11 @@ db.custom_center = {
 	icon   = ' ',
 	desc   = 'Open coc-settings.json    ',
 	action = 'e ~/.config/nvim/coc-settings.json'
+	},
+	{
+	icon   = ' ',
+	desc   = 'Browse recent             ',
+	action = 'browse oldfiles'
 	},
 	{
 	icon   = ' ',
@@ -31,7 +41,7 @@ db.custom_center = {
 	icon   = 'ﰸ ',
 	desc   = 'Quit                      ',
 	action = 'q',
-	}
+	},
 }
 
 require('tips')
