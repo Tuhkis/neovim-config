@@ -24,12 +24,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'ayu-theme/ayu-vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'jdonaldson/vaxe'
 Plug 'glepnir/dashboard-nvim'
 Plug 'casonadams/walh'
 Plug 'romgrk/barbar.nvim'
+Plug 'morhetz/gruvbox'
+Plug 'rebelot/kanagawa.nvim'
 " Telescope and it's dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -52,15 +53,16 @@ set noswapfile
 set clipboard+=unnamedplus
 set mouse=v
 
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-" colorscheme ayu
-colorscheme walh-default
+" colorscheme walh-default
+" colorscheme gruvbox
+colorscheme kanagawa
 
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='term'
+" let g:airline_theme='term'
+" let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='jellybeans'
+" let g:airline_theme='ayu_mirage'
 let g:airline#init#gui_mode = 1
 
 " air-line looking cool (need powerline font)
@@ -87,7 +89,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 " airline symbols
 let g:airline_left_sep = '  '
 let g:airline_left_alt_sep = ''
-let g:airline_right_sep = '  '
+let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
@@ -119,10 +121,14 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 
-inoremap <silent><expr> <Tab>
-	\ coc#pum#visible() ? coc#pum#next(2) :
+" Tabbing around in suggestions.
+inoremap <silent><expr> <TAB>
+	\ coc#pum#visible() ? coc#pum#next(1) :
 	\ CheckBackspace() ? "\<Tab>" :
 	\ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+	\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Set Set floaterm size
 let g:floaterm_width = 0.99
