@@ -4,7 +4,7 @@ This is my custom neovim config. Experimenting with mason for lsp.
 # Features
  - Custom dashboard <br>
  - Telescope grep and file browser <br>
- - Autocompletion with coc.nvim <br>
+ - Autocompletion with nvim lsp <br>
  - Uses your terminal colour scheme <br>
  - Vim airline (+ devicons) <br>
  - Floating terminal <br>
@@ -52,8 +52,15 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
    - Configs for the Nvim LSP client.
  - [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
    - "mason-lspconfig bridges mason.nvim with the lspconfig plugin - making it easier to use both plugins together."
+ - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+   - Autosuggestions
+ - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+   - Autosuggestions with LSP.
+ - [saadparwaiz1/cmp_luasnip](https://saadparwaiz1/cmp_luasnip)
+   - Luasnip with nvim-cmp.
+ - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+   - Snip plugin.
 
 # Installing
 You need the powerline fonts and a nerdfont for this to work.
 Clone the files into your `~/config/nvim/`directory.
-You also need Node for coc.nvim to work.
