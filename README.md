@@ -14,8 +14,6 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
 <br>
  - [LunarWatcher/auto-pairs](https://github.com/LunarWatcher/auto-pairs)
    - For autoclosing brackets and quotation marks and such.
- - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
-   - To "Make neovim as smart as vscode." (Add language servers and such)
  - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
    - Cool bar.
  - [vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
@@ -48,6 +46,9 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
    - "fzf-native is a c port of fzf. It only covers the algorithm and implements few functions to support calculating the score."
  - [nvim-telescope/telescope-file-browser.nvim](https://github.com/nvim-telescope/telescope-file-browser.nvim)
    - Telescope file browser extension.
+ - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
+   - "Portable package manager for Neovim that runs everywhere Neovim runs.
+Easily install and manage LSP servers, DAP servers, linters, and formatters."
 
 # Installing
 You need the powerline fonts and a nerdfont for this to work.
