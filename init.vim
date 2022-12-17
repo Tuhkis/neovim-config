@@ -31,6 +31,7 @@ Plug 'casonadams/walh'
 Plug 'romgrk/barbar.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'rebelot/kanagawa.nvim'
+Plug 'nyoom-engineering/oxocarbon.nvim'
 " Telescope and it's dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -55,7 +56,9 @@ set mouse=v
 
 " colorscheme walh-default
 " colorscheme gruvbox
-colorscheme kanagawa
+" colorscheme kanagawa
+lua vim.opt.background = "dark"
+colorscheme oxocarbon
 
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
