@@ -23,6 +23,8 @@ Plug 'romgrk/barbar.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'nyoom-engineering/oxocarbon.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
 " Telescope and it's dependencies
 Plug 'nvim-lua/plenary.nvim'
@@ -43,6 +45,7 @@ set mouse=v
 
 " Setup mason.nvim
 lua require("mason").setup()
+require("mason-lspconfig").setup()
 
 " colorscheme walh-default
 " colorscheme gruvbox

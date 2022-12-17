@@ -1,5 +1,5 @@
-# neovim-config
-This is my custom neovim config.
+# neovim-config (Mason edition)
+This is my custom neovim config. Experimenting with mason for lsp.
 
 # Features
  - Custom dashboard <br>
@@ -47,8 +47,11 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
  - [nvim-telescope/telescope-file-browser.nvim](https://github.com/nvim-telescope/telescope-file-browser.nvim)
    - Telescope file browser extension.
  - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
-   - "Portable package manager for Neovim that runs everywhere Neovim runs.
-Easily install and manage LSP servers, DAP servers, linters, and formatters."
+   - "Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters."
+ - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+   - Configs for the Nvim LSP client.
+ - [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+   - "mason-lspconfig bridges mason.nvim with the lspconfig plugin - making it easier to use both plugins together."
 
 # Installing
 You need the powerline fonts and a nerdfont for this to work.
