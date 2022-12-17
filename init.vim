@@ -7,18 +7,9 @@
 " This is my personal Neovim configuration.
 " Made with vim script and a little bit of lua thrown in.
 "
-" The coc plugins I'm using:
-"  - coc-discord-neovim
-"  - coc-sh
-"  - coc-rust-analyzer
-"  - coc-json
-"  - coc-haxe
-"  - coc-clangd
-"
 
 call plug#begin()
 Plug 'LunarWatcher/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'preservim/nerdtree', {'on':  'NERDTreeToggle' } 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -38,11 +29,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 call plug#end()
-
-function! CheckBackspace() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunc
 
 set number
 set relativenumber
@@ -125,13 +111,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 
 " Tabbing around in suggestions.
-inoremap <silent><expr> <TAB>
-	\ coc#pum#visible() ? coc#pum#next(1) :
-	\ CheckBackspace() ? "\<Tab>" :
-	\ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-	\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Set Set floaterm size
 let g:floaterm_width = 0.99
