@@ -43,10 +43,6 @@ set noswapfile
 set clipboard+=unnamedplus
 set mouse=v
 
-" Setup mason.nvim
-lua require("mason").setup()
-require("mason-lspconfig").setup()
-
 " colorscheme walh-default
 " colorscheme gruvbox
 " colorscheme kanagawa
@@ -132,3 +128,6 @@ lua require('telescope-config')
 
 " Load dashboard module 
 lua require('dashboard-config')
+
+" Load mason.nvim module
+lua require('mason-config')
