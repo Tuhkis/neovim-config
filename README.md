@@ -20,8 +20,6 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
    - Cool themeing for cool bar.
  - [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)
    - Cool icons (Only works with a nerd font)
- - [ayu-theme/ayu-vim](https://github.com/ayu-theme/ayu-vim)
-   - Cool colour theme.
  - [voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)
    - Floating terminal
  - [jdonaldson/vaxe](https://github.com/jdonaldson/vaxe)
@@ -32,12 +30,10 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
    - Terminal theme
  - [romgrk/barbar.nvim](https://github.com/romgrk/barbar.nvim)
    - "is a tabline plugin with re-orderable, auto-sizing, clickable tabs, icons, nice highlighting, sort-by commands and a magic jump-to-buffer mode. Plus the tab names are made unique when two filenames match."
- - [morhetz/gruvbox](https://github.com/morhetz/gruvbox)
-   - Gruvbox colourscheme.
- - [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
-   - Kanagawa colourscheme.
  - [nyoom-engineering/oxocarbon.nvim](https://github.com/nyoom-engineering.nvim)
    - oxocarbon.nvim colourscheme.
+ - [tanvirtin/monokai.nvim](https://github.com/tanvirtin/monokai.nvim)
+   - Monokai colourscheme
  - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
    - A dependecy for telescope plugin.
  - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
