@@ -7,18 +7,9 @@
 " This is my personal Neovim configuration.
 " Made with vim script and a little bit of lua thrown in.
 "
-" The coc plugins I'm using:
-"  - coc-discord-neovim
-"  - coc-sh
-"  - coc-rust-analyzer
-"  - coc-json
-"  - coc-haxe
-"  - coc-clangd
-"
 
 call plug#begin()
 Plug 'LunarWatcher/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'preservim/nerdtree', {'on':  'NERDTreeToggle' } 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -27,11 +18,20 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'voldikss/vim-floaterm'
 Plug 'jdonaldson/vaxe'
 Plug 'glepnir/dashboard-nvim'
-Plug 'casonadams/walh'
 Plug 'romgrk/barbar.nvim'
-Plug 'morhetz/gruvbox'
-Plug 'rebelot/kanagawa.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'ollykel/v-vim'
+Plug 'alaviss/nim.nvim'
+" Colourshemes
+Plug 'tanvirtin/monokai.nvim'
 Plug 'nyoom-engineering/oxocarbon.nvim'
+Plug 'casonadams/walh'
 " Telescope and it's dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -39,33 +39,25 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCM
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 call plug#end()
 
-function! CheckBackspace() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunc
-
 set number
 set relativenumber
-" set termguicolors     " enable true colors support
-set notermguicolors     " disable true colors support
+set termguicolors     " enable true colors support
+" set notermguicolors     " disable true colors support
 set encoding=UTF-8
 set splitright
 set noswapfile
 set clipboard+=unnamedplus
-set mouse=v
+" set mouse=v
 
-" colorscheme walh-default
-" colorscheme gruvbox
-" colorscheme kanagawa
 lua vim.opt.background = "dark"
-colorscheme oxocarbon
+" colorscheme walh-default
+" colorscheme oxocarbon
+colorscheme monokai_pro
 
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline_theme='term'
-" let g:airline_theme='base16_gruvbox_dark_hard'
-let g:airline_theme='jellybeans'
-" let g:airline_theme='ayu_mirage'
+" let g:airline_theme='jellybeans'
 let g:airline#init#gui_mode = 1
 
 " air-line looking cool (need powerline font)
@@ -75,7 +67,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" unicode symbols (These are backup if powerline fonts are not installed)
+" unicode symbols (These are backup if needed fonts are not installed)
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
@@ -90,9 +82,9 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " airline symbols
-let g:airline_left_sep = '  '
+let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ' '
+let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
@@ -125,13 +117,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 
 " Tabbing around in suggestions.
-inoremap <silent><expr> <TAB>
-	\ coc#pum#visible() ? coc#pum#next(1) :
-	\ CheckBackspace() ? "\<Tab>" :
-	\ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-	\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Set Set floaterm size
 let g:floaterm_width = 0.99
@@ -146,3 +131,6 @@ lua require('telescope-config')
 
 " Load dashboard module 
 lua require('dashboard-config')
+
+" Load mason.nvim module
+lua require('mason-config')
