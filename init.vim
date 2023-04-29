@@ -18,7 +18,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'voldikss/vim-floaterm'
 Plug 'jdonaldson/vaxe'
 Plug 'glepnir/dashboard-nvim'
-Plug 'romgrk/barbar.nvim'
+" Plug 'romgrk/barbar.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
@@ -28,10 +28,12 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'ollykel/v-vim'
 Plug 'alaviss/nim.nvim'
+Plug 'folke/todo-comments.nvim'
 " Colourshemes
 Plug 'tanvirtin/monokai.nvim'
 Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug 'casonadams/walh'
+Plug 'ziglang/zig.vim'
 " Telescope and it's dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -50,13 +52,13 @@ set clipboard+=unnamedplus
 " set mouse=v
 
 lua vim.opt.background = "dark"
-" colorscheme walh-default
+colorscheme walh-gruvbox
 " colorscheme oxocarbon
-colorscheme monokai_pro
+" colorscheme monokai_pro
 
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='term'
+let g:airline_theme='term'
 " let g:airline_theme='jellybeans'
 let g:airline#init#gui_mode = 1
 
@@ -134,3 +136,6 @@ lua require('dashboard-config')
 
 " Load mason.nvim module
 lua require('mason-config')
+
+" Load TODO comments plugin stuff
+lua require('todo-config')
