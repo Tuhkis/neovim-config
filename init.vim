@@ -28,6 +28,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'ollykel/v-vim'
 Plug 'alaviss/nim.nvim'
+Plug 'Tetralux/odin.vim'
 Plug 'folke/todo-comments.nvim'
 " Colourshemes
 Plug 'tanvirtin/monokai.nvim'
