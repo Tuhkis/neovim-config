@@ -30,6 +30,7 @@ Plug 'ollykel/v-vim'
 Plug 'alaviss/nim.nvim'
 Plug 'Tetralux/odin.vim'
 Plug 'folke/todo-comments.nvim'
+Plug 'lervag/vimtex'
 " Colourshemes
 Plug 'tanvirtin/monokai.nvim'
 Plug 'nyoom-engineering/oxocarbon.nvim'
@@ -54,15 +55,17 @@ set clipboard+=unnamedplus
 " set mouse=v
 
 lua vim.opt.background = "dark"
-colorscheme walh-gruvbox
-" colorscheme oxocarbon
+" colorscheme walh-gruvbox
+colorscheme oxocarbon
 " colorscheme monokai_pro
 
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='term'
-" let g:airline_theme='jellybeans'
+" let g:airline_theme='term'
+let g:airline_theme='jellybeans'
 let g:airline#init#gui_mode = 1
+
+set guifont=VictorMono\ Nerd\ Font\ Semi-Bold:h14
 
 " air-line looking cool (need powerline font)
 let g:airline_powerline_fonts = 1

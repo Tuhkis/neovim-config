@@ -9,6 +9,7 @@ This is my custom neovim config. Experimenting with mason for lsp.
  - Vim airline (+ devicons) <br>
  - Floating terminal <br>
 
+<!--
 # plugins
 I'm using [vim plug](https://github.com/junegunn/vim-plug).
 <br>
@@ -56,6 +57,7 @@ I'm using [vim plug](https://github.com/junegunn/vim-plug).
    - Luasnip with nvim-cmp.
  - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
    - Snip plugin.
+-->
 
 # Installing
 You need the powerline fonts and a nerdfont for this to work.
