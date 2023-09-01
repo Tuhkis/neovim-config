@@ -1,5 +1,5 @@
-# neovim-config (Mason edition)
-This is my custom neovim config. Experimenting with mason for lsp.
+# neovim-config
+This is my custom neovim config.
 
 # Features
  - Custom dashboard <br>
